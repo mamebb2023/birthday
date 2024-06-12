@@ -1,11 +1,5 @@
-import FlipPhone from "../components/FlipPhone";
-
 const App = () => {
-  return (
-    <>
-      <FlipPhone />
-    </>
-  );
+  return <></>;
 };
 
 export default App;
