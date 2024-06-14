@@ -1,3 +1,5 @@
+import "boxicons";
+
 import First from "./components/First";
 
 const App = () => {
