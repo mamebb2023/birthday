@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+
 import Section from "./Section";
+import { PageContext } from "../App";
 import "./First.css";
 
 const First = () => {
+  const { handlePageChange } = useContext(PageContext);
   const [display, setDisplay] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
@@ -25,12 +28,15 @@ const First = () => {
           For better expirence, rotate the whole device
         </p>
         {showButton && (
-          <p className="text-center block">
-            <button className="bg-[white] text-[1.1em] text-n-8 text-center font-bold fade-in rounded-md border border-[transparent] transition cursor-pointer hover:bg-n-8 hover:text-n-1 hover:border-n-1 flex flex-row justify-between items-center px-4 py-2">
+          <button
+            onClink={() => handlePageChange("happybirthday")}
+            className="text-center block"
+          >
+            <a className="bg-[white] text-[1.1em] text-n-8 text-center font-bold fade-in rounded-md border border-[transparent] transition cursor-pointer hover:bg-n-8 hover:text-n-1 hover:border-n-1 flex flex-row justify-between items-center px-4 py-2">
               <p>Next</p>
               <span class="ml-2 material-symbols-outlined">arrow_forward</span>
-            </button>
-          </p>
+            </a>
+          </button>
         )}
       </div>
     </Section>
