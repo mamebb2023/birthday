@@ -6,12 +6,10 @@ import Button from "./assets/Button";
 const Home = () => {
   return (
     <Section className="bg-n-8 text-n-1 flex justify-center items-center">
-      <div className="">
+      <div className="flex flex-col justify-center items-center">
         <img src="/iphone.png" className="iphone" />
         <p>For a better experience, rotate the whole device.</p>
-        <Button href="">
-          Next <box-icon name="right-arrow-alt"></box-icon>
-        </Button>
+        <Button href="/birthday">Next</Button>
       </div>
     </Section>
   );
