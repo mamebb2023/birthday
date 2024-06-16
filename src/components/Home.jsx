@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Section from "./assets/Section";
-import "./Home.css";
-import Button from "./assets/Button";
+import Section from "./Section";
+import Button from "./Button";
 
+import "./Home.css";
 const Home = () => {
   const [display1, setDisplay1] = useState(false);
   const [display2, setDisplay2] = useState(false);
