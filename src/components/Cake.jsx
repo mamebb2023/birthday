@@ -7,7 +7,7 @@ import { icons } from "./assets";
 const Cake = () => {
   return (
     <Section className="bg-[#b39aff]">
-      <div className="relative bg-[red]">
+      <div className="relative">
         <div className="absolute -top-[200px] left-[170px] w-[300px]">
           <Bake />
         </div>
@@ -28,9 +28,9 @@ const Cake = () => {
         {icons.map((icon) => (
           <lord-icon
             src={`https://cdn.lordicon.com/${icon.icon}.json`}
-            trigger="loop"
-            delay="2000"
-            colors="primary:#c71f16,secondary:#ebe6ef,tertiary:#ffc738,quaternary:#f9c9c0,quinary:#f24c00"
+            trigger={icon.trigger || "loop"}
+            state={icon.state}
+            delay="1000"
             style={{ width: "250px", height: "250px" }}
           ></lord-icon>
         ))}
