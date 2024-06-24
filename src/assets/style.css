@@ -1,0 +1,32 @@
+.cake {
+  background-image: linear-gradient(270deg, #eae46f, #af4261);
+}
+
+.happybirthday {
+  font-family: "Playwrite NL";
+  background-image: linear-gradient(45deg, #0004ff, #00d9ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: .5s linear;
+}
+
+.name {
+  font-family: "Great Vibes";
+  color: #fff;
+}
+
+.blower {
+  z-index: 5;
+  position: absolute;
+  top: 40%;
+  left: 100px;
+  width: 50px;
+  height: 50px;
+  background: red;
+  transition: .5s ease;
+}
+
+.blower:active {
+  transform: scale(90%);
+}
