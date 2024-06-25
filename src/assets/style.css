@@ -4,7 +4,7 @@
 
 .happybirthday {
   font-family: "Playwrite NL";
-  background-image: linear-gradient(45deg, #0004ff, #00d9ff);
+  background-image: linear-gradient(45deg, #000000, #053b00);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
@@ -19,14 +19,34 @@
 .blower {
   z-index: 5;
   position: absolute;
-  top: 40%;
-  left: 100px;
-  width: 50px;
-  height: 50px;
-  background: red;
+  top: 120px;
+  left: 190px;
+  width: 110px;
+  height: 110px;
+  background: url('/ballon.png') no-repeat center center;
+  background-size: contain;
   transition: .5s ease;
+  transform: rotate(-20deg);
 }
 
 .blower:active {
-  transform: scale(90%);
+  transform: scale(80%);
+}
+
+.wind {
+  position: absolute;
+  top: 180px;
+  left: 230px;
+  width: 110px;
+  height: 110px;
+  background: url('/wind.png') no-repeat center center;
+  background-size: contain;
+  transition: .5s ease;
+  transform: rotate(-120deg) translate(0,0);
+  animation: windMove 1s ease;
+  -webkit-animation: windMove 1s ease;
+}
+
+@keyframes windMove {
+  to { transform: rotate(-120deg) translate(-70px, 0px); opacity: 0; }
 }

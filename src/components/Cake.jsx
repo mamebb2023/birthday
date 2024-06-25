@@ -7,15 +7,20 @@ import Galaxy from "./Galaxy";
 const Cake = () => {
   const [display, setDisplay] = useState(false);
   const [opacity, setOpacity] = useState(100);
+  const [showWind, setShowWind] = useState(false);
+  const [showText, setShowText] = useState(false);
   const [horror, setHorror] = useState(false);
 
   setTimeout(() => {
     setDisplay(true);
-  }, 1000);
+    setTimeout(() => {});
+  }, 10000);
 
   const blowCandle = () => {
-
-    console.log("hi")
+    setShowWind(true); // Set wind visible first
+    setTimeout(() => {
+      setShowWind(false); // Hide wind after 500 milliseconds
+    }, 500);
     setOpacity(opacity - 10);
     if (opacity === 10) {
       setHorror(true);
@@ -30,6 +35,8 @@ const Cake = () => {
       {display && (
         <button className="blower fade-in" onClick={blowCandle}></button>
       )}
+      {showWind && <i className="wind"></i>}
+      <p className="absolute top-10">Click to blow the candle...</p>
       <div className="relative w-full h-full">
         <div className="absolute -top-[200px] left-[170px] w-[300px]">
           <Bake />
