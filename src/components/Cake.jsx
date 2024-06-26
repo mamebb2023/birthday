@@ -17,7 +17,7 @@ const Cake = () => {
   }, 10000);
 
   const blowCandle = () => {
-    setShowWind(true); // Set wind visible first
+    setShowWind(true);
     setTimeout(() => {
       setShowWind(false); // Hide wind after 500 milliseconds
     }, 500);
@@ -29,6 +29,9 @@ const Cake = () => {
 
   return (
     <Section className="cake relative">
+      {horror && (
+        <div className="absolute top-0 left-0 z-5 bg-redhorror">Horror</div>
+      )}
       <div className="absolute top-0 left-0">
         <Galaxy />
       </div>
@@ -36,7 +39,11 @@ const Cake = () => {
         <button className="blower fade-in" onClick={blowCandle}></button>
       )}
       {showWind && <i className="wind"></i>}
-      <p className="absolute top-10">Click to blow the candle...</p>
+      {display && (
+        <p className="blow-text fade-in absolute top-[100px] left-[350px] text-n-1 font-['Playwrite NL']">
+          blow the candle...
+        </p>
+      )}
       <div className="relative w-full h-full">
         <div className="absolute -top-[200px] left-[170px] w-[300px]">
           <Bake />

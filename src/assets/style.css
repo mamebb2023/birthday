@@ -16,6 +16,16 @@
   color: #fff;
 }
 
+.blow-text {
+  animation: anim1 1s linear infinite;
+  -webkit-animation: anim1 1s linear infinite;
+}
+
+@keyframes anim1 {
+  0%, 100% {transform: rotate(0deg);}
+  50% {transform: rotate(10deg);}
+}
+
 .blower {
   z-index: 5;
   position: absolute;
@@ -27,6 +37,13 @@
   background-size: contain;
   transition: .5s ease;
   transform: rotate(-20deg);
+  animation: popup .3s ease;
+  -webkit-animation: popup 1s ease;
+}
+
+@keyframes popup {
+  from {transform: scale(10%);}
+  to {transform: scale(100%);}
 }
 
 .blower:active {
