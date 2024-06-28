@@ -4,14 +4,14 @@ import Button from "./Button";
 
 const Home = () => {
   const [showText, setShowText] = useState(false);
-  const [showButton, setShowButton] = useState(true);
+  const [showButton, setShowButton] = useState(false);
 
   setTimeout(() => {
     setShowText(true);
     setTimeout(() => {
       setShowButton(true);
     }, 2000);
-  }, 10000);
+  }, 5000);
 
   return (
     <Section className="flex justify-center items-center" themeBlack>
@@ -27,10 +27,9 @@ const Home = () => {
         {showButton && (
           <Button
             href="/birthday"
-            className="absolute top-[40%] right-[300px]"
-            iswhite
+            className="absolute top-[40%] right-[300px] z-3 fade-in"
           >
-            <span className="material-symbols-outlined hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600">
+            <span className=" material-symbols-outlined transition hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600">
               arrow_forward
             </span>
           </Button>
