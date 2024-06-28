@@ -1,33 +1,38 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Section from "./Section";
 import Button from "./Button";
 
-import "./Home.css";
 const Home = () => {
-  const [display1, setDisplay1] = useState(false);
-  const [display2, setDisplay2] = useState(false);
+  const [showText, setShowText] = useState(false);
+  const [showButton, setShowButton] = useState(true);
 
   setTimeout(() => {
-    setDisplay1(true);
+    setShowText(true);
     setTimeout(() => {
-      setDisplay2(true);
+      setShowButton(true);
     }, 2000);
-  }, 6000);
+  }, 10000);
 
   return (
-    <Section className="relative bg-n-8 text-n-1 flex justify-center items-center">
-      {display1 && (
+    <Section className="flex justify-center items-center" themeBlack>
+      {showText && (
         <p className="absolute top-[50%] left-[100px] rotate-90 fade-in">
           just kidding, you did not just flip your laptop, did you?
         </p>
       )}
 
       <div className="flex flex-col justify-center items-center">
-        <img src="/iphone.png" className="iphone" />
+        <img src="/laptop.png" className="iphone" />
         <p>For a better experience, rotate the whole device.</p>
-        {display2 && (
-          <Button href="/birthday" white>
-            Next
+        {showButton && (
+          <Button
+            href="/birthday"
+            className="absolute top-[40%] right-[300px]"
+            iswhite
+          >
+            <span className="material-symbols-outlined hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-pink-600">
+              arrow_forward
+            </span>
           </Button>
         )}
       </div>
