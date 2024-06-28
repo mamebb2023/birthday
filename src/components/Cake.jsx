@@ -5,7 +5,7 @@ import Galaxy from "./Galaxy";
 
 const Cake = () => {
   return (
-    <Section className="bg-gradient-to-r from-purple-500 to-yellow-600">
+    <Section className="fade-in bg-gradient-to-r from-purple-500 to-yellow-600">
       <div className="z-3 absolute -top-[200px] left-[470px] w-[300px]  ">
         <Bake />
       </div>

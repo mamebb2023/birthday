@@ -13,7 +13,7 @@ const Birthday = () => {
         setShowText(true);
       }, 2000);
       return () => clearTimeout(textTimer);
-    }, 5000);
+    }, 7000);
     return () => clearTimeout(buttonTimer);
   }, []);
 
