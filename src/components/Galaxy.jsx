@@ -5,7 +5,7 @@ import "../../style/Galaxy.css";
 
 const Galaxy = () => {
   return (
-    <Section className="relative overflow-hidden">
+    <Section className="relative overflow-hidden" themeNone>
       <div className="galaxy">
         <div id="stars"></div>
         <div id="stars2"></div>

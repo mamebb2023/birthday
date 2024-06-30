@@ -5,6 +5,7 @@ const Section = ({
   children,
   theme1 = false,
   themeBlack = false,
+  themeNone = false,
 }) => {
   if (theme1) {
     return (
@@ -13,6 +14,12 @@ const Section = ({
         <div className="circle circle1 bg-[#00fff2]"></div>
         <div className="circle circle2 bg-[#00ff1e]"></div>
         <div className="circle circle3 bg-[#bababa]"></div>
+      </div>
+    );
+  } else if (themeNone) {
+    return (
+      <div className={`section relative h-[100vh] w-[100vw] ${className}`}>
+        {children}
       </div>
     );
   } else if (themeBlack) {
